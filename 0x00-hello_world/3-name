@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c $CFILE -MF "cisfun"
+gcc $CFILE -o "cisfun"
