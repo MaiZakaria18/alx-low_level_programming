@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - Entry point of the program
  *
@@ -7,17 +6,17 @@
  */
 int main(void)
 {
-char a = 'a', A = 'A';
-while (a <= 'z')
+char lowercase = 'a';
+char uppercase = 'A';
+while (lowercase <= 'z')
 {
-putchar(a);
-a++;
+putchar(lowercase);
+lowercase++;
 }
-char A = 'A', a = 'a';
-while (A <= 'Z')
+while (uppercase <= 'Z')
 {
-putchar(A);
-A++;
+putchar(uppercase);
+uppercase++;
 }
 putchar('\n');
 return (0);
