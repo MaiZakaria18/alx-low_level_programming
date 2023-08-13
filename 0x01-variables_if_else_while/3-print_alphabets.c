@@ -13,7 +13,6 @@ while (A <= 'Z')
 putchar(A);
 A++;
 }
-putchar('\n');
 while (a <= 'z')
 {
 putchar(a);
