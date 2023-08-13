@@ -11,7 +11,7 @@ int number = 0;
 while (number <= 9)
 {
 putchar(number + '0');
-number ++
+number++;
 if (number != 9)
 {
 putchar(',');
