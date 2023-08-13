@@ -7,10 +7,11 @@
  */
 int main(void)
 {
-
-for (int number = 0; number <= 9; number++)
+int number = 0;
+while (number <= 9)
 {
 putchar(number + '0');
+number ++
 if (number != 9)
 {
 putchar(',');
