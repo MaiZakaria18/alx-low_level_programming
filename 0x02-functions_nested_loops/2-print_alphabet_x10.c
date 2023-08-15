@@ -18,9 +18,9 @@ while (letter <= 'z')
 {
 _putchar(letter);
 letter++;
-_putchar('\n');
 }
 repetition--;
+_putchar('\n');
 letter = 'a';
 }
 }
