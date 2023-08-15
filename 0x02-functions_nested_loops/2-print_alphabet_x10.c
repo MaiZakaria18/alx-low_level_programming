@@ -7,12 +7,12 @@
  * 'a' to 'z'
  * followed by a newline character.
  */
-void print_alphabet_x10(void)
+void print_alphabet(void)
 {
-char alphabet_x10 = 'a';
-for (char alphabet_x10 = 'a'; alphabet_x10 <= 'z'; alphabet_x10++)
+char alphabet = 'a';
+for (char alphabet = 'a'; alphabet <= 'z'; alphabet++)
 {
-_putchar(alphabet_x10);
+_putchar(alphabet);
 for (int i; i <= 10; i++)
 {
 _putchar(i);
