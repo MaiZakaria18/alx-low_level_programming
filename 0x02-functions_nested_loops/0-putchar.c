@@ -1,10 +1,10 @@
 #include <unistd.h>
 #include "main.h"
 /**
-* main entery point
-*
-* Return: On success 0
-*/
+ * main - Entry point of the program
+ *
+ * Return: 0 on success
+ */
 int main(void)
 {
 putchar('_');
