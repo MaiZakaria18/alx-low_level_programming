@@ -15,7 +15,7 @@ while (repetition > 0)
 {
 while (letter <= 'z')
 {
-_putchar(letter)
+_putchar(letter);
 letter++;
 }
 repetition--;
