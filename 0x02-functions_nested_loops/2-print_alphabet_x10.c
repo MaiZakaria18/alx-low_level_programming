@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - Entry point of the program
+ * print_alphabet_x10 - Prints the alphabet in lowercase
+ * 10 times followed by a newline.
  *
- * Description:  prints the alphabet, in lowercase, followed by a new line.
- *
- * Return: 0 on success
+ * Description: This function prints the lowercase alphabet characters
+ * from 'a' to 'z'
+ * ten times, each time followed by a newline character.
  */
 void print_alphabet_x10(void)
 {
@@ -17,9 +18,9 @@ while (letter <= 'z')
 {
 _putchar(letter);
 letter++;
+_putchar('\n');
 }
 repetition--;
 letter = 'a';
 }
-_putchar('\n');
 }
