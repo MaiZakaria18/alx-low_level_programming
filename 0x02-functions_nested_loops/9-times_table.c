@@ -29,6 +29,9 @@ if (j != 9)
 putchar(',');
 putchar(' ');
 }
+j++;
 }
+putchar('\n');
+i++;
 }
 }
