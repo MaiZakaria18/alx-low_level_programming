@@ -21,7 +21,6 @@ putchar(result % 10 + '0');
 }
 else
 {
-putchar(' ');
 putchar(result + '0');
 }
 if (j != 9)
