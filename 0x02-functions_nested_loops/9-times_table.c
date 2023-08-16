@@ -13,24 +13,20 @@ while (i <= 9)
 int j = 0;
 while (j <= 9)
 {
+putchar(',');
+putchar(' ');
 int result = i * j;
-if (result >= 10)
+if (result <= 9)
 {
-putchar(result / 10 + '0');
-putchar(result % 10 + '0');
+putchar(' ');
 }
 else
 {
-putchar(result + '0');
-}
-if (j != 9)
-{
-putchar(',');
-putchar(' ');
+putchar(result / 10 + '0');
+putchar(result % 10 + '0');
+putchr('\n');
 }
 j++;
 }
-putchar('\n');
 i++;
-}
 }
