@@ -7,9 +7,10 @@
  * Return: 0 on success
  */
 int _abs(int number)
-{int number;
+{
 if (number < 0)
-{ number = -number;
-_putchar(number);
+{
+number = -number
 }
+return (n);
 }
