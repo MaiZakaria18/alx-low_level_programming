@@ -10,11 +10,10 @@ void times_table(void)
 int i = 0;
 while (i <= 9)
 {
-int num = 0;
-while (num <= 9)
+int j = 0;
+while (j <= 9)
 {
-{
-int result = i * num;
+int result = i * j;
 if (result >= 10)
 {
 putchar(result / 10 + '0');
@@ -22,21 +21,14 @@ putchar(result % 10 + '0');
 }
 else
 {
+putchar(' ');
 putchar(result + '0');
 }
-if (num != 9)
+if (j != 9)
 {
 putchar(',');
 putchar(' ');
 }
-else
-{
-putchar('$');
-}
-num++;
-}
-putchar('\n');
-i++;
 }
 }
 }
