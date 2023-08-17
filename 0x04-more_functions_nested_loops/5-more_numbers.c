@@ -15,8 +15,8 @@ while (num <= 14)
 {
 if (num >= 10)
 {
-putchar(num / 10 + '0');
-putchar(num % 10 + '0');
+_putchar(num / 10 + '0');
+_putchar(num % 10 + '0');
 num++;
 }
 _putchar('\n');
