@@ -1,7 +1,8 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * more_numbers - a function that prints 10 times
- * Description - a function that prints 10 times
+ * more_numbers - function that prints 10 times
+ * Description - function that prints 10 times
  * Return: 0 on success
  */
 void more_numbers(void)
