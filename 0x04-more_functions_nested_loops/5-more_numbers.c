@@ -3,7 +3,6 @@
 /**
  * more_numbers - function that prints 10 times
  * Description - function that prints 10 times
- * Return: 0 on success
  */
 void more_numbers(void)
 {
