@@ -9,11 +9,11 @@
  */
 void print_numbers(void)
 {
-char number = 0;
-while (number >= 0 && number < 10)
+char number = '0';
+while (number <= '9')
 {
-_putchar(number + '0');
+_putchar(number);
 number++;
-_putchar('\n');
 }
+_putchar('\n');
 }
