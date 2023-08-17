@@ -10,10 +10,10 @@
 void print_numbers(void)
 {
 char number = 0;
-while (number >= 9)
+while (number >= 0 && number <10)
 {
 _putchar(number + '0');
-_putchar('\n');
 number++;
+_putchar('\n');
 }
 }
