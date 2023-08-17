@@ -2,20 +2,21 @@
 #include <stdio.h>
 
 /**
- *  isupper - function that checks for uppercase character.
+ *  _isdigit - function that checks for a digit
  *
- * @c: input for alphabet
+ * @c: input for digit
+ *Description - function that checks for a digit
  *
  * Return: 1 if c is uppercase Returns 0 otherwise
  */
-int _isupper(int c)
+int _isdigit(int c)
 {
-if (c >= 'A' && c <= 'Z')
+if (c >= 48 && c < 58)
 {
-return(1);
+return (1);
 }
 else
 {
-return(0);
+return (0);
 }
 }
