@@ -10,7 +10,7 @@
 void print_numbers(void)
 {
 char number = 0;
-while (number >= 0 && number <10)
+while (number >= 0 && number < 10)
 {
 _putchar(number + '0');
 number++;
