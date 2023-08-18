@@ -16,3 +16,8 @@ _putchar(num + '0');
 _putchar('\n');
 }
 }
+int main(void)
+{
+print_most_numbers();
+return (0);
+}
