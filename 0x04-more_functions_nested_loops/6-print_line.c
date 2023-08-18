@@ -13,7 +13,7 @@ if (n <= 0)
 _putchar('\n');
 return;
 }
-while ( y < n)
+while (y < n)
 {
 _putchar(95);
 y++;
