@@ -13,12 +13,13 @@ int num = 0;
 while (num <= 14)
 {
 if (num >= 10)
-{_putchar(num / 10 + '0');
-_putchar(num % 10 + '0');
+{
+_putchar(num / 10 + '0' );
 }
+_putchar(num % 10 + '0' );
 num++;
-_putchar('\n');
 }
+_putchar('\n');
 i++;
 }
 }
