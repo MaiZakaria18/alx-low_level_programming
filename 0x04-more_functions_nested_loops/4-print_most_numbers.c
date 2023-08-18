@@ -11,6 +11,6 @@ if (num != 50 && num != 52)
 {
 _putchar(num + '0');
 }
-_putchar('\n');
 }
+_putchar('\n');
 }
