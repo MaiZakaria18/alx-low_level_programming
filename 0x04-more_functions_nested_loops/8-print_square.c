@@ -14,6 +14,7 @@ if (size <= 0)
 _putchar('\n');
 }
 int x = 0;
+
 while (x < size)
 {
 int y = 0;
