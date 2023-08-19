@@ -19,10 +19,10 @@ while (x < size)
 int y = 0;
 while (y < size)
 {
-_putchar ('#');
+_putchar('#');
 y++;
 }
-_putchar ('\n');
+_putchar('\n');
 x++;
 }
 }
