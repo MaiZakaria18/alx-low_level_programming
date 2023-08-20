@@ -10,12 +10,7 @@ for (int num ; num > 0 && num <= 100 ; num++)
 {
 if (num % 3 == 0 && num % 5 == 0)
 {
-char str[] = "FizzBuzz";
-int i = 0;
-while (str[i] != '\0')
-{
-putchar(str[i]);
-i++;
+printf = ("FizzBuzz");
 }
 }
 else if (num % 3 == 0)
