@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *print_triangle -  function that prints a triangle
- Descriptin -  function that prints a triangle
+ Description -  function that prints a triangle
  *@size: size of the triangle
  *
  */
