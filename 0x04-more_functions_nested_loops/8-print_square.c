@@ -16,6 +16,7 @@ _putchar('\n');
 else
 {
 int x = 0;
+int y = 0;
 while (x <= size)
 {
 int y = 0;
