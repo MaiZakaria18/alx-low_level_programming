@@ -16,11 +16,9 @@ _putchar('\n');
 else
 {
 int x = 0;
-
 while (x < size)
 {
 int y = 0;
-
 while (y < size)
 {
 _putchar(35);
