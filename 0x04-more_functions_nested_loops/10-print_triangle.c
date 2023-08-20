@@ -15,13 +15,13 @@ else
 {
 int x;
 int y;
+int z;
 for (x = 1; x <= size; x++)
 {
 for (y = 0; y < size - x; y++)
 {
 _putchar(' ');
 }
-int z;
 for (z = 0; z < x; z++)
 {
 _putchar('#');
