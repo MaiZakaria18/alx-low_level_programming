@@ -6,19 +6,17 @@
  */
 int main(void)
 {
-int num = 1;
-while (num > 0 && num <= 100)
-{ 
+for (int num ; num > 0 && num <= 100 ; num++)
+{
 if (num % 3 == 0 && num % 5 == 0)
 {
-putchar('F');
-putchar('i');
-putchar('z');
-putchar('z');
-putchar('B');
-putchar('u');
-putchar('z');
-putchar('z');
+char str[] = "FizzBuzz";
+int i = 0;
+while (str[i] != '\0')
+{
+putchar(str[i]);
+i++;
+}
 }
 else if (num % 3 == 0)
 {
@@ -36,17 +34,16 @@ putchar('z');
 }
 else
 {
-if(num > 9)
+if (num > 9)
 {
-putchar(num / 10 + '0');
-putchar(num % 10 +'0');
-} 
+putchar(num / 10  + '0');
+putchar(num % 10  + '0');
+}
 else
 {
 putchar(num + '0');
 }
 }
-num++;
 putchar(' ');
 }
 return (0);
