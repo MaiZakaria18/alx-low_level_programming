@@ -22,11 +22,21 @@ else if (num % 5 == 0)
 {
 printf("Buzz");
 }
-else
+else if
 {
 printf("%d", num);
 }
+else
+{
+if (num != 100)
+{
 putchar(' ');
+}
+else
+{
+putchar('\n');
+}
+}
 num++;
 }
 return (0);
