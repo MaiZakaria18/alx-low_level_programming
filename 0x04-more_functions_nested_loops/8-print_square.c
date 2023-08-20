@@ -13,11 +13,11 @@ if (size <= 0)
 {
 _putchar('\n');
 }
-int x = 0;
+char x = 0;
 
 while (x < size)
 {
-int y = 0;
+char y = 0;
 while (y < size)
 {
 _putchar(35);
