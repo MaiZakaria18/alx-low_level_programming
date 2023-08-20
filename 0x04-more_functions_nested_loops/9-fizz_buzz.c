@@ -25,7 +25,14 @@ else
 {
 printf("%d", num);
 }
-putchar(' ');
+if (num == 100)
+{
+printf("\n");
+}
+else
+{
+printf(" ");
+}
 num++;
 }
 return (0);
