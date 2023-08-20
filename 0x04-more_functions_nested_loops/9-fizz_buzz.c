@@ -7,8 +7,7 @@
 int main(void)
 {
 int num = 1;
-
-while (num > 0 && num <= 100)
+while ( num <= 100)
 {
 if (num % 3 == 0 && num % 5 == 0)
 {
@@ -22,22 +21,20 @@ else if (num % 5 == 0)
 {
 printf("Buzz");
 }
-else if (num % 3 != 0 && num % 5 != 0)
-{
-printf("%d", num);
-}
 else
 {
 if (num != 100)
 {
+printf("%d", num);
 putchar(' ');
 }
 else
 {
+printf("%d", num);
 putchar('\n');
 }
-}
 num++;
+}
 }
 return (0);
 }
