@@ -6,12 +6,13 @@
  */
 int main(void)
 {
-for (int num ; num > 0 && num <= 100 ; num++)
+int num;
+
+while (num > 0 && num <= 100)
 {
 if (num % 3 == 0 && num % 5 == 0)
 {
-printf = ("FizzBuzz");
-}
+printf("FizzBuzz");
 }
 else if (num % 3 == 0)
 {
@@ -40,6 +41,7 @@ putchar(num + '0');
 }
 }
 putchar(' ');
+num++;
 }
 return (0);
 }
