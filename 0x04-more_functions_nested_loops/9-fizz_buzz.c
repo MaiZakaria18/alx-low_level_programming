@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-int num;
+int num = 1;
 
 while (num > 0 && num <= 100)
 {
