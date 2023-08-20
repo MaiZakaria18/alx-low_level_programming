@@ -16,29 +16,15 @@ printf("FizzBuzz");
 }
 else if (num % 3 == 0)
 {
-putchar('F');
-putchar('i');
-putchar('z');
-putchar('z');
+printf("Fizz");
 }
 else if (num % 5 == 0)
 {
-putchar('B');
-putchar('u');
-putchar('z');
-putchar('z');
+printf("Buzz");
 }
 else
 {
-if (num > 9)
-{
-putchar(num / 10  + '0');
-putchar(num % 10  + '0');
-}
-else
-{
-putchar(num + '0');
-}
+printf("%d", num);
 }
 putchar(' ');
 num++;
