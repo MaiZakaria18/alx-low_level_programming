@@ -15,18 +15,14 @@ _putchar('\n');
 }
 else
 {
-int x = 0;
-int y = 0;
-while (x <= size)
+int x;
+int y;
+for (x = 0; x <= size; x++;)
 {
-int y = 0;
-while (y <= size)
+for (y = 0; y <= size; y++;)
 {
 _putchar(35);
-y++;
-}
-}
 _putchar('\n');
-x++;
+}
 }
 }
