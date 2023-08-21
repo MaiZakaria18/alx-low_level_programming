@@ -11,9 +11,7 @@ int rev_str;
 int str;
 char temp;
 for (length = 0; s[length] != '\0'; length++)
-{
-}
-for (str = 0, rev_str = length - 1; rev_str > str; str++,rev_str--)
+for (str = 0, rev_str = length - 1; rev_str > str; str++, rev_str--)
 {
 temp = s[str];
 s[str] = s[rev_str];
