@@ -11,10 +11,10 @@ int rev_str;
 
 for (length = 0; s[length] != '\0'; length++)
 {
-}
-
 for (rev_str = length - 1; rev_str >= 0; rev_str--)
 {
 _putchar(s[rev_str]);
 }
+}
+_putchar('\n');
 }
