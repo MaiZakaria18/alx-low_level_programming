@@ -12,7 +12,7 @@ for (length = 0; str[length] != '\0'; length++)
 
 for (n = (length - 1) / 2; str[length] != '\0'; length++)
 {
-_putchar(str[length]);
+_putchar(str[2]);
 }
 _putchar('\n');
 }
