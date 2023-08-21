@@ -19,7 +19,7 @@ for (normal_str = 0; s[length] != '\0'; normal_str++)
 _putchar(s[normal_str]);
 }
 
-for (rev_str = length - 1; rev_str >= 0; rev_str++)
+for (rev_str = length - 1; rev_str >= 0; rev_str--)
 {
 _putchar(s[rev_str]);
 }
