@@ -17,5 +17,4 @@ temp = s[str];
 s[str] = s[rev_str];
 s[rev_str] = temp;
 }
-_putchar('\n');
 }
