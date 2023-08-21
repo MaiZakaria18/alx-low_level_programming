@@ -17,7 +17,7 @@ index = length / 2;
 }
 else
 {
-index = (length - 1) / 2;
+index = (length + 1) / 2;
 }
 for (n = index; n < length; n++)
 {
