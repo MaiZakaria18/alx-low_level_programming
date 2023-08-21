@@ -13,6 +13,6 @@ if (num % 2 == 0)
 {
 _putchar(str[num]);
 }
-_putchar('\n');
 }
+_putchar('\n');
 }
