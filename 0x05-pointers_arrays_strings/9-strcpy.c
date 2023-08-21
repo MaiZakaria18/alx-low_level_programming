@@ -6,7 +6,7 @@
  * to the buffer pointed to by dest
  * @dest: string
  * @src: string
- * retuen: the pointer to dest
+ * Return: pointer to "dest"
  */
 char *_strcpy(char *dest, char *src)
 {
