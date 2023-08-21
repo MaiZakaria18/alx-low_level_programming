@@ -3,6 +3,7 @@
  *  _strlen - Write a function that returns the length of a string.
  *  Description - Write a function that returns the length of a string.
  *  @s: charachter
+ * return: len
  */
 int _strlen(char *s)
 {
