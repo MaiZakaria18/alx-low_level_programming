@@ -10,7 +10,7 @@ int length;
 for (length = 0; s[length] != '\0'; length++)
 {
 int normal_str;
-for (normal_str = 0; s != '\0'; normal_str++)
+for (normal_str = 0; s[length] != '\0'; normal_str++)
 {
 _putchar(s[normal_str]);
 }
