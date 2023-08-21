@@ -13,7 +13,7 @@ char temp;
 for (length = 0; s[length] != '\0'; length++)
 {
 }
-for (rev_str = length - 1; rev_str >= 0; rev_str--)
+for (str = 0, rev_str = length - 1; rev_str >= 0; rev_str--)
 {
 temp = s[str];
 s[str] = s[rev_str];
