@@ -28,7 +28,9 @@ string[length - 1] == '.' ||
 string[length - 1] == ';' ||
 string[length - 1] == ',' ||
 length == 0)
+{
 string[length] -= 32;
+}
 length++;
 }
 return (string);
