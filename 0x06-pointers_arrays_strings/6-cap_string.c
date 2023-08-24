@@ -6,7 +6,7 @@
  * @string: string
  * Return: capital string
  */
-char *cap_string(char *s)
+char *cap_string(char *string)
 {
 int index, x;
 
