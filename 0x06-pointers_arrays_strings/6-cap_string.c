@@ -6,32 +6,26 @@
  * @string: string
  * Return: capital string
  */
+char *cap_string(char *s)
+{
+int index, x;
 
-char *cap_string(char *string)
+char ch[13] = {' ', '\t', '\n', ',', ';', '.',
+		'!', '?', '"', '(', ')', '{', '}'};
+for (index = 0; string[index] != '\0'; index++)
 {
-int length = 0;
-while (string[length])
+if (index == 0 && string[index] >= 'a' && string[index] <= 'z')
+string[index] -= 32;
+for (x = 0; x < 13; x++)
 {
-while (!string[length] >= 'a' && string[length] <= 'z')
-length++;
-if (string[length - 1] == ' ' ||
-string[length - 1] == '"' ||
-string[length - 1] == '\n' ||
-string[length - 1] == '\t' ||
-string[length - 1] == '(' ||
-string[length - 1] == ')' ||
-string[length - 1] == '{' ||
-string[length - 1] == '}' ||
-string[length - 1] == '?' ||
-string[length - 1] == '!' ||
-string[length - 1] == '.' ||
-string[length - 1] == ';' ||
-string[length - 1] == ',' ||
-length == 0)
+if (string[index] == ch[x])
 {
-string[length] -= 32;
+if (string[index + 1] >= 'a' && string[index + 1] <= 'z')
+{
+string[index + 1] -= 32;
 }
-length++;
+}
+}
 }
 return (string);
 }
