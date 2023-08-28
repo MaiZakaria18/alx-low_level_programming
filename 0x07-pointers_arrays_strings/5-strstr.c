@@ -11,12 +11,12 @@ while (*haystack)
 {
 char *y = haystack;
 char *x = needle;
-while (*y && *y == *x)
+while (*x != '\0' && *y == *x)
 {
 y++;
 x++;
 }
-if (*y == '\0')
+if (*x == '\0')
 return (haystack);
 haystack++;
 }
