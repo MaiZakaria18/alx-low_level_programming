@@ -15,5 +15,5 @@ for (y = 0; needle[y] == haystack[x + y]; y++)
 if (needle[y + 1] == '\0')
 return (haystack + x);
 }
-return (0);
+return ('\0');
 }
