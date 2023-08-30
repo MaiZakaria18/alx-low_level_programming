@@ -7,7 +7,7 @@
  */
 int recursive(int n, int divisor)
 {
-if (divisor <= 1)
+if (n <= 1)
 {
 return (0);
 }
@@ -15,11 +15,13 @@ else if (n % divisor == 0 && divisor > 1)
 {
 return (0);
 }
-else if ((n / divisor) < divisor)
+else if (divisor > (n / divisor))
 {
-return (recursive(n, divisor - 1));
+return (1);
 }
+return (recursive(n, divisor + 1));
 }
+
 /**
  * is_prime_number - function returns prime number
  * @n: number
@@ -27,9 +29,5 @@ return (recursive(n, divisor - 1));
  */
 int is_prime_number(int n)
 {
-if (n <= 1)
-{
-return (0);
-}
 return (recursive(n, 1));
 }
