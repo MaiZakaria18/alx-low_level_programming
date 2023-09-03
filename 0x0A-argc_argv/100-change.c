@@ -19,7 +19,7 @@ if (argc == 2)
 int x;
 int l_c = 0;
 int money = atoi(argv[1]);
-int coins[] = {25, 10, 5, 2};
+int coins[] = {25, 10, 5, 2, 1};
 for (x = 0; x < 5; x++)
 {
 if (money >= coins[x])
