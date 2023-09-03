@@ -9,7 +9,8 @@
 int main(int argc, char *argv[])
 {
 int money = atoi(argv[1]);
-if (money < 0) {
+if (money < 0)
+{
 printf("0\n");
 }
 if (argc == 2)
