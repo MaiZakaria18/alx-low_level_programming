@@ -8,16 +8,11 @@
  */
 int main(int argc, char *argv[])
 {
-int money = atoi(argv[1]);
-if (money < 0)
-{
-printf("0\n");
-return (0);
-}
 if (argc == 2)
 {
 int x;
 int l_c = 0;
+int money = atoi(argv[1];
 int coins[] = {25, 10, 5, 2, 1};
 for (x = 0; x < 5; x++)
 {
