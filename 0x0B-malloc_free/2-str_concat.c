@@ -26,7 +26,7 @@ if (conc == 0)
 {
 return (NULL);
 }
-strcpy(conc, s1);
+strcat(conc, s1);
 strcat(conc, s2);
 return (conc);
 }
