@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+#include <string.h>
 /**
  * _strdup - function
  * @str: array
@@ -8,30 +9,20 @@
  */
 char *_strdup(char *str)
 {
-char *s;
-unsigned int size;
+char *p;
 unsigned int x;
 if (str == 0)
 {
 return (NULL);
 }
-else
-{
-for (size = 0; *str != '\0'; size++)
-{
-s = malloc(size * sizeof(char) + 1);
-if (s == 0)
+p = malloc((strlen(str) * sizeof(char)) + 1);
+if (p == 0)
 {
 return (NULL);
 }
-else
+for (x = 0; x < strlen(str); x++)
 {
-for (x = 0; x < size; x++)
-{
-s[x] = str[x];
+p[x] = str[x];
 }
-}
-}
-}
-return (s);
+return (p);
 }
