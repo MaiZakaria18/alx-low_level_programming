@@ -12,32 +12,21 @@ char *str_concat(char *s1, char *s2)
 {
 int i;
 char *conc;
-int size1 = strlen(s1);
-int size2 = strlen(s2);
-conc = malloc((size1 + size2) * sizeof(char) + 1);
-if (s1 == NULL)
-{
-s1 = "\0";
-}
-if (s2 == NULL)
-{
-s2 = "\0";
-}
+int size1 = (s1 != NULL) ? strlen(s1) : 0;
+int size2 = (s2 != NULL) ? strlen(s2) : 0;
+conc = malloc((size1 + size2 + 1) * sizeof(char));
 if (conc == 0)
 {
 return (NULL);
 }
-for (i = 0; i <= (size1 + size2); i++)
-{
-if (i < size1)
+for (i = 0; i <= size1; i++)
 {
 conc[i] = s1[i];
 }
-else
+for (i = 0; i < size2; i++)
 {
-conc[i] = s2[i - size1];
+conc[size1 + i] = s2[i];
 }
-}
-conc[i] = '\0';
+conc[size1 + size2] = '\0';
 return (conc);
 }
