@@ -26,7 +26,7 @@ if (conc == 0)
 {
 return (NULL);
 }
-conc += '\0'
+conc += '\0';
 strcat(conc, s1);
 strcat(conc, s2);
 return (conc);
