@@ -22,6 +22,6 @@ if (conc == 0)
 return (NULL);
 }
 strcpy(conc, s1);
-strcpy(conc + strlen(s1), s2);
+strcat(conc, s2);
 return (conc);
 }
