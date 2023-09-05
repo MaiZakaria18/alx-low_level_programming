@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * free_grid - prints a grid of integer
  * @height: height of the grid
@@ -8,12 +9,8 @@
 
 void free_grid(int **grid, int height)
 {
-if (grid == NULL)
-{
-return;
-}
-
-for (int i = 0; i < height; i++)
+int i;
+for (i = 0; i < height; i++)
 {
 if (grid[i] != NULL)
 {
