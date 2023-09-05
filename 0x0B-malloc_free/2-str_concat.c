@@ -11,10 +11,9 @@
 char *str_concat(char *s1, char *s2)
 {
 char *conc;
-unsigned int x = strlen(s1) + strlen(s2);
-size1 = strlen(s1);
-size2 = strlen(s2);
-conc = malloc((x + 1) * sizeof(char));
+int size1 = strlen(s1);
+int size2 = strlen(s2);
+conc = malloc((size1 + size2 + 1) * sizeof(char));
 if (s1 == NULL)
 {
 s1 = "";
