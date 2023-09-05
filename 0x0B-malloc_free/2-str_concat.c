@@ -10,6 +10,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
+int i;
 char *conc;
 int size1 = strlen(s1);
 int size2 = strlen(s2);
@@ -26,8 +27,16 @@ if (conc == 0)
 {
 return (NULL);
 }
-conc += '\0';
-strcat(conc, s1);
-strcat(conc, s2);
+for (i = 0; i <= size1 + size2; i++)
+{
+if (i < size1)
+{
+conc[i] = s1[i];
+}
+else
+{
+conc[i] = s2[i - size1];
+}
+}
 return (conc);
 }
