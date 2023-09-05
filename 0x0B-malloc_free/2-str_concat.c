@@ -14,7 +14,7 @@ int i;
 char *conc;
 int size1 = strlen(s1);
 int size2 = strlen(s2);
-conc = malloc((size1 + size2 + 1) * sizeof(char));
+conc = malloc((size1 + size2) * sizeof(char) + 1);
 if (s1 == NULL)
 {
 s1 = "\0";
@@ -27,7 +27,7 @@ if (conc == 0)
 {
 return (NULL);
 }
-for (i = 0; i <= size1 + size2; i++)
+for (i = 0; i <= (size1 + size2); i++)
 {
 if (i < size1)
 {
