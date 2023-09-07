@@ -18,7 +18,10 @@ if (result == NULL)
 return (NULL);
 strcpy(result, s1);
 if (n >= l2)
+{
+n = l2;
 strcpy(result, s2);
+}
 else
 {
 strncat(result, s2, n);
