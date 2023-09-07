@@ -11,11 +11,12 @@ int *array_range(int min, int max)
 {
 int x;
 int *result;
+int len;
 if (min > max)
 {
 return (NULL);
 }
-len = max - min + 1
+len = max - min + 1;
 result = malloc(sizeof(int) * len);
 if (result == NULL)
 {
