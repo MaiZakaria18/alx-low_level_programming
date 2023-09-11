@@ -20,14 +20,15 @@ nDog->name = malloc(sizeof(char) * (strlen(name) + 1));
 if (nDog->name == NULL)
 {
 return (NULL);
-free(nDog->owner);
+free(nDog);
 }
 strcpy(nDog->name, name);
 nDog->owner = malloc(sizeof(char) * (strlen(owner) + 1));
 if (nDog->owner == NULL)
 {
 return (NULL);
-free(nDog->owner);
+free(nDog->name);
+free(nDog);
 }
 strcpy(nDog->owner, owner);
 nDog->age = age;
