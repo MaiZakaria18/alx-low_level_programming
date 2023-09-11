@@ -19,17 +19,17 @@ return (NULL);
 nDog->name = malloc(sizeof(char) * (strlen(name) + 1));
 if (nDog->name == NULL)
 {
-free(nDog->name);
 return (NULL);
+free(nDog->owner);
 }
 strcpy(nDog->name, name);
-nDog->age = age;
+nDog->owner = malloc(sizeof(char) * (strlen(owner) + 1));
 if (nDog->owner == NULL)
 {
-free(nDog->owner);
 return (NULL);
+free(nDog->owner);
 }
-nDog->owner = malloc(sizeof(char) * (strlen(owner) + 1));
 strcpy(nDog->owner, owner);
+nDog->age = age;
 return (nDog);
 }
