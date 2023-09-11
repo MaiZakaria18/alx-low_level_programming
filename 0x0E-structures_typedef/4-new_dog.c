@@ -16,12 +16,12 @@ dog_t *nDog;
 nDog = (dog_t *)malloc(sizeof(dog_t));
 if (nDog == NULL)
 return (NULL);
+nDog->name = malloc(sizeof(char) * (strlen(name) + 1));
 if (nDog->name == NULL)
 {
 free(nDog->name);
 return (NULL);
 }
-nDog->name = malloc(sizeof(char) * (strlen(name) + 1));
 strcpy(nDog->name, name);
 nDog->age = age;
 if (nDog->owner == NULL)
