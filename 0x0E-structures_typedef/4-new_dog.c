@@ -23,6 +23,7 @@ nDog->name = malloc(sizeof(char) * (strlen(name) + 1));
 if (nDog->name == NULL)
 {
 free(nDog->name);
+free(nDog);
 return (NULL);
 }
 strcpy(nDog->name, name);
@@ -30,6 +31,7 @@ nDog->owner = malloc(sizeof(char) * (strlen(owner) + 1));
 if (nDog->owner == NULL)
 {
 free(nDog->owner);
+free(nDog);
 return (NULL);
 }
 strcpy(nDog->owner, owner);
