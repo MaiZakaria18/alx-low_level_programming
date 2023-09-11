@@ -1,5 +1,5 @@
 #include "dog.h"
-
+#include <stdio.h>
 /**
  * free_dog - free d
  * @d: pointer
