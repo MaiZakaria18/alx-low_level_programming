@@ -27,7 +27,7 @@ nDog->owner = malloc(sizeof(char) * (strlen(owner) + 1));
 if (nDog->owner == NULL)
 {
 return (NULL);
-free(nDog-owner);
+free(nDog->owner);
 }
 strcpy(nDog->owner, owner);
 nDog->age = age;
