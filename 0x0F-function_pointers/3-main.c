@@ -1,4 +1,4 @@
-#include "3-clac.h"
+#include "3-calc.h"
 
 /**
  * main - func
@@ -17,7 +17,7 @@ b = atoi(argv[3]);
 func = get_op_func(argv[2]);
 if (!func)
 printf("Error\n"), exit(99);
-if (!b && argv[2][0] == '/' || argv[2][0] == '%')
+if (!b && (argv[2][0] == '/' || argv[2][0] == '%'))
 printf("Error\n"), exit(100);
 printf("%d\n", func(a, b));
 return (0);
