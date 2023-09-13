@@ -19,6 +19,6 @@ b = atoi(argv[1]);
 if (b < 0)
 printf("Error\n"), exit(2);
 while (b--)
-printf("%02hhx%s", *x++, b ? " ": "\n");
+printf("%02hhx%s", *x++, b ? " " : "\n");
 return (0);
 }
