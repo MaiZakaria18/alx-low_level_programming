@@ -7,7 +7,7 @@
  * Return: func
  */
 
-int main (int argc, char **argv)
+int main(int argc, char **argv)
 {
 int (*func)(int, int), a, b;
 if (argc != 4)
