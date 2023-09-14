@@ -19,11 +19,7 @@ if (!n)
 return (0);
 }
 for (x = 0; x < n; x++)
-{
-int v;
-v = va_arg(par, int);
-sum += v;
-}
+sum += va_arg(par, int);
 va_end(par);
 return (sum);
 }
