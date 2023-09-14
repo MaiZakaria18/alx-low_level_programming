@@ -40,9 +40,12 @@ void f_string(char *separator, va_list par)
 {
 char *string = va_arg(par, char *);
 switch ((int)(!string))
+{
 case (1):
 string = "(nil)";
 printf("%s%s", separator, string);
+break;
+}
 }
 
 /**
@@ -63,6 +66,8 @@ all_p form[] = {
 };
 va_start(par, format);
 x = 0;
+int printed_first_item;
+printed_first_item = 0;
 while (format && format[x])
 {
 y = 0;
@@ -70,8 +75,12 @@ while (form[y].f)
 {
 if (format[x] == form[y].f[0])
 {
-form[y].func(separator, par);
-separator = ", ";
+if (printed_first_item)
+{
+printf(", ");
+form[y].func("", par);
+printed_first_item = 1;
+}
 }
 y++;
 }
