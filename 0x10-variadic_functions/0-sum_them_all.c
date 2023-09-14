@@ -14,7 +14,10 @@ int sum_them_all(const unsigned int n, ...)
 va_list par;
 unsigned int x, sum = 0;
 va_start(par, n)
-
+if (n == 0)
+{
+return;
+}
 for (x = 0; x < n; x++)
 {
 int v;
