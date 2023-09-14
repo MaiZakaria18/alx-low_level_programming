@@ -19,7 +19,7 @@ for (x = 0; x < n; x++)
 {
 s = va_arg(par, char *);
 if (s == NULL)
-printf("nil");
+printf("(nil)");
 else
 printf("%s", s);
 if (separator != NULL && x < n - 1)
@@ -27,6 +27,6 @@ if (separator != NULL && x < n - 1)
 printf("%s", separator);
 }
 }
-va_end(par);
 printf("\n");
+va_end(par);
 }
