@@ -13,10 +13,10 @@ int sum_them_all(const unsigned int n, ...)
 
 va_list par;
 unsigned int x, sum = 0;
-va_start(par, n)
-if (n == 0)
+va_start(par, n);
+if (!n)
 {
-return;
+return (0);
 }
 for (x = 0; x < n; x++)
 {
