@@ -5,7 +5,7 @@
 
 /**
  * list_len - function that returns the number of elements
- * @list: list
+ * @h: list
  * Return: value
  */
 size_t list_len(const list_t *h)
