@@ -10,12 +10,12 @@
 
 void free_list(list_t *head)
 {
-list_t *list = malloc(sizeof(list_t);
+list_t *list;
 while (head)
 {
-list = head->str;
+list = head->next;
 free(head->str);
 free(head);
-head = temp;
+head = list;
 }
 }
