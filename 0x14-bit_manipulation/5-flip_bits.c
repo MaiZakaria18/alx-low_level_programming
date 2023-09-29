@@ -16,7 +16,7 @@ for (x = 63; x >= 0; x--)
 {
 y = z >> x;
 if (y & 1)
-c++
+c++;
 }
 return (c);
 }
