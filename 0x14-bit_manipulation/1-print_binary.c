@@ -18,7 +18,7 @@ if (c & 1)
 _putchar('1');
 count++;
 }
-if (count)
+else if (count)
 {
 _putchar('0');
 }
