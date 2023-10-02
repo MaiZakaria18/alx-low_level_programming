@@ -15,7 +15,7 @@ ssize_t file;
 ssize_t r;
 ssize_t w;
 
-file = open(filename, O_RONLY);
+file = open(filename, O_RDONLY);
 if (file == -1)
 return (0);
 
