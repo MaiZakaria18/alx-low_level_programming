@@ -1,67 +1,70 @@
-#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
 #include <fcntl.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 #include <errno.h>
+
+#define BUFFER_SIZE 1024
+
 /**
- * exit_with_error - function
- * @code: int
- * @format: pointer
- * @arg: pointer
- */
-void exit_with_error(int code, const char *format, const char *arg)
-{
-dprintf(STDERR_FILENO, format, arg);
-exit(code);
-}
-/**
- * main - function
+ * main - func
  * @argc: int
- * @argv: pointer
- * Return: value
+ * @argv: char
+ * Return: 0
  */
-int main(int argc, char *argv[])
+int main(int argc, char *argv[]) 
 {
-if (argc != 3)
+if (argc != 3) 
 {
-exit_with_error(97, "Usage: cp file_from file_to\n");
+dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+exit(97);
 }
-const char *file_from = argv[1];
-const char *file_to = argv[2];
-int fd_from;
-fd_from = open(file_from, O_RDONLY);
-if (fd_from == -1)
+char *file_from = argv[1];
+char *file_to = argv[2];
+int fd_from = open(file_from, O_RDONLY);
+if (fd_from == -1) 
 {
-exit_with_error(98, "Error: Can't read from file %s\n", file_from);
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+exit(98);
 }
-int fd_to;
-fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
-if (fd_to == -1)
+int fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP);
+if (fd_to == -1) 
 {
-exit_with_error(99, "Error: Can't write to file %s\n", file_to);
+dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
+exit(99);
 }
-char buffer[1024];
-ssize_t bytes_read;
-while ((bytes_read = read(fd_from, buffer, sizeof(buffer))) > 0)
+char buffer[BUFFER_SIZE];
+ssize_t bytes_read, bytes_written;
+while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0) 
 {
-if (write(fd_to, buffer, bytes_read) == -1)
+bytes_written = write(fd_to, buffer, bytes_read);
+if (bytes_written == -1) 
 {
-exit_with_error(99, "Error: Can't write to file %s\n", file_to);
+dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
+exit(99);
 }
-}
-if (bytes_read == -1)
+if (bytes_written != bytes_read) 
 {
-exit_with_error(99, "Error: Can't write to file %s\n", file_to);
+dprintf(STDERR_FILENO, "Error: Incomplete write to file %s\n", file_to);
+exit(99);
 }
-if (close(fd_from) == -1)
+}
+if (bytes_read == -1) 
 {
-exit_with_error(100, "Error: Can't close fd %d\n", fd_from);
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+exit(98);
 }
-if (close(fd_to) == -1)
+if (close(fd_from) == -1) 
 {
-exit_with_error(100, "Error: Can't close fd %d\n", fd_to);
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
+exit(100);
 }
-return (0);
+if (close(fd_to) == -1) 
+{
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
+exit(100);
+}
+return 0;
 }
