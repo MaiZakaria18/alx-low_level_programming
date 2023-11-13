@@ -18,7 +18,8 @@ int divide(int a, int b) {
     if (b != 0) {
         return a / b;
     } else {
-        return 0;
+	    printf("Error: Division by zero\n");
+		    return 0;
     }
 }
 
@@ -26,6 +27,7 @@ int modulus(int a, int b) {
     if (b != 0) {
         return a % b;
     } else {
-        return 0;
+	    printf("Error: Division by zero\n");
+		    return 0;
     }
 }
