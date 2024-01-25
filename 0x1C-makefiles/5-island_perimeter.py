@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """5-island_perimeter module"""
+
+
 def island_perimeter(grid):
-    
-    
     """Returns the perimeter of the island described in grid"""
     c = 0
     length = len(grid) - 1
